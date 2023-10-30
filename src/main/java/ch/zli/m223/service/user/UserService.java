@@ -4,6 +4,7 @@ import java.util.List;
 
 import ch.zli.m223.model.AppUser;
 import ch.zli.m223.service.user.exception.InvalidIdException;
+import ch.zli.m223.service.user.exception.InvalidEmailOrPasswordException;
 
 public interface UserService {
 

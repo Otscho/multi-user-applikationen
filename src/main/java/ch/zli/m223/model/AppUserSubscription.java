@@ -9,9 +9,9 @@ import java.util.Date;
 public interface AppUserSubscription {
     Long getId();
 
-    Date getStartDate();
+    String getStartDate();
 
-    Date getEndDate();
+    String  getEndDate();
 
     AppUserImpl getAppUser();
 

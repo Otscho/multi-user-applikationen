@@ -14,9 +14,9 @@ public class SubscriptionImpl implements Subscription {
 
     private String SubscriptionType;
 
-    private Integer price;
+    private Float price;
 
-    public SubscriptionImpl(String subscriptionType, Integer price) {
+    public SubscriptionImpl(String subscriptionType, Float price) {
         SubscriptionType = subscriptionType;
         this.price = price;
     }
@@ -35,7 +35,7 @@ public class SubscriptionImpl implements Subscription {
     }
 
     @Override
-    public Integer getPrice() {
+    public Float getPrice() {
         return price;
     }
 }

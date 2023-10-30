@@ -14,9 +14,9 @@ public class BookingTypeImpl implements BookingTyp {
 
     private String bookingType;
 
-    private Float price;
+    private double price;
 
-    public BookingTypeImpl(String bookingType, Float price) {
+    public BookingTypeImpl(String bookingType, double price) {
         this.bookingType = bookingType;
         this.price = price;
     }
@@ -35,7 +35,7 @@ public class BookingTypeImpl implements BookingTyp {
     }
 
     @Override
-    public Float getPrice() {
+    public Double getPrice() {
         return price;
     }
 }

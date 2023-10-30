@@ -6,5 +6,5 @@ public interface BookingTyp {
 
     String getBookingType();
 
-    Float getPrice();
+    Double getPrice();
 }

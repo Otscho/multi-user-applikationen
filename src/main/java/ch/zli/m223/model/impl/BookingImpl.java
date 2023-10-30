@@ -3,8 +3,6 @@ package ch.zli.m223.model.impl;
 import ch.zli.m223.model.Booking;
 import jakarta.persistence.*;
 
-import java.util.Date;
-
 @Entity(name="Booking")
 public class BookingImpl implements Booking {
 
@@ -13,7 +11,7 @@ public class BookingImpl implements Booking {
     private Long id;
 
     @Column(nullable = false)
-    private Date date;
+    private String date;
 
     @ManyToOne
     private AppUserImpl appUser;
@@ -21,7 +19,7 @@ public class BookingImpl implements Booking {
     @ManyToOne
     private BookingTypeImpl bookingType;
 
-    public BookingImpl(Date date, AppUserImpl appUser, BookingTypeImpl bookingType) {
+    public BookingImpl(String date, AppUserImpl appUser, BookingTypeImpl bookingType) {
         this.date = date;
         this.appUser = appUser;
         this.bookingType = bookingType;
@@ -30,7 +28,7 @@ public class BookingImpl implements Booking {
     protected BookingImpl() {
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -48,9 +46,10 @@ public class BookingImpl implements Booking {
     }
 
     @Override
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
+
     @Override
     public AppUserImpl getAppUser() {
         return appUser;

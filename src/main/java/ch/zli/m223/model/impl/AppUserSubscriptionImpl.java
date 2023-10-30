@@ -15,8 +15,8 @@ public class AppUserSubscriptionImpl implements AppUserSubscription {
     @GeneratedValue
     private Long id;
 
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
 
     @ManyToOne
     private AppUserImpl appUser;
@@ -27,7 +27,7 @@ public class AppUserSubscriptionImpl implements AppUserSubscription {
     @ManyToOne
     private RebateImpl rebate;
 
-    public AppUserSubscriptionImpl(Date startDate, Date endDate, AppUserImpl appUser, SubscriptionImpl subscription, RebateImpl rebate) {
+    public AppUserSubscriptionImpl(String startDate, String endDate, AppUserImpl appUser, SubscriptionImpl subscription, RebateImpl rebate) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.appUser = appUser;
@@ -37,11 +37,11 @@ public class AppUserSubscriptionImpl implements AppUserSubscription {
 
     protected AppUserSubscriptionImpl() {}
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -63,12 +63,12 @@ public class AppUserSubscriptionImpl implements AppUserSubscription {
     }
 
     @Override
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
     @Override
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 

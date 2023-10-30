@@ -5,5 +5,5 @@ public interface Subscription {
 
     String getSubscriptionType();
 
-    Integer getPrice();
+    Float getPrice();
 }
