@@ -17,4 +17,17 @@ public class RebateImpl implements Rebate {
     public RebateImpl(Integer rebate) {
         this.rebate = rebate;
     }
+
+    protected RebateImpl() {
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public Integer getRebate() {
+        return rebate;
+    }
 }

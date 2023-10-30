@@ -20,4 +20,22 @@ public class SubscriptionImpl implements Subscription {
         SubscriptionType = subscriptionType;
         this.price = price;
     }
+
+    protected SubscriptionImpl() {
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public String getSubscriptionType() {
+        return SubscriptionType;
+    }
+
+    @Override
+    public Integer getPrice() {
+        return price;
+    }
 }

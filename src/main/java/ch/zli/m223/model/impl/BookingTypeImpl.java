@@ -20,4 +20,22 @@ public class BookingTypeImpl implements BookingTyp {
         this.bookingType = bookingType;
         this.price = price;
     }
+
+    protected BookingTypeImpl() {
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public String getBookingType() {
+        return bookingType;
+    }
+
+    @Override
+    public Float getPrice() {
+        return price;
+    }
 }

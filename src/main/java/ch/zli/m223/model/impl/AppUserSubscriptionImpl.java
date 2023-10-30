@@ -35,6 +35,8 @@ public class AppUserSubscriptionImpl implements AppUserSubscription {
         this.rebate = rebate;
     }
 
+    protected AppUserSubscriptionImpl() {}
+
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
@@ -53,5 +55,35 @@ public class AppUserSubscriptionImpl implements AppUserSubscription {
 
     public void setRebate(RebateImpl rebate) {
         this.rebate = rebate;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    @Override
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    @Override
+    public AppUserImpl getAppUser() {
+        return appUser;
+    }
+
+    @Override
+    public SubscriptionImpl getSubscription() {
+        return subscription;
+    }
+
+    @Override
+    public RebateImpl getRebate() {
+        return rebate;
     }
 }
