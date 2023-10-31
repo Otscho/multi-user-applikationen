@@ -6,7 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity(name="BookingTyp")
-public class BookingTypeImpl implements BookingTyp {
+public class BookingTypImpl implements BookingTyp {
 
     @Id
     @GeneratedValue
@@ -14,14 +14,14 @@ public class BookingTypeImpl implements BookingTyp {
 
     private String bookingType;
 
-    private double price;
+    private Float price;
 
-    public BookingTypeImpl(String bookingType, double price) {
+    public BookingTypImpl(String bookingType, Float price) {
         this.bookingType = bookingType;
         this.price = price;
     }
 
-    protected BookingTypeImpl() {
+    protected BookingTypImpl() {
     }
 
     @Override
@@ -35,7 +35,7 @@ public class BookingTypeImpl implements BookingTyp {
     }
 
     @Override
-    public Double getPrice() {
+    public Float getPrice() {
         return price;
     }
 }

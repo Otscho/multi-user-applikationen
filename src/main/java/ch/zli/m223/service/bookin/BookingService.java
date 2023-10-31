@@ -6,6 +6,7 @@ import ch.zli.m223.model.BookingTyp;
 import ch.zli.m223.service.user.exception.InvalidIdException;
 
 import java.text.DateFormat;
+import java.util.Arrays;
 import java.util.List;
 
 public interface BookingService {
@@ -35,4 +36,12 @@ public interface BookingService {
             AppUser appUser,
             BookingTyp bookingTyp
             );
+
+    Booking updateBooking(Long id, String date, String appUser, String bookingTyp);
+
+    List<Booking> getBookingList();
+
+    void deleteBooking(Long id);
+
+    Booking setBookingTyp(Long id, String bookingTyp);
 }

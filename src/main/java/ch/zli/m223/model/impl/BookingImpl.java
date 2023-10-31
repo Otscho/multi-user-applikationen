@@ -17,9 +17,9 @@ public class BookingImpl implements Booking {
     private AppUserImpl appUser;
 
     @ManyToOne
-    private BookingTypeImpl bookingType;
+    private BookingTypImpl bookingType;
 
-    public BookingImpl(String date, AppUserImpl appUser, BookingTypeImpl bookingType) {
+    public BookingImpl(String date, AppUserImpl appUser, BookingTypImpl bookingType) {
         this.date = date;
         this.appUser = appUser;
         this.bookingType = bookingType;
@@ -36,7 +36,7 @@ public class BookingImpl implements Booking {
         this.appUser = appUser;
     }
 
-    public void setBookingType(BookingTypeImpl bookingType) {
+    public void setBookingType(BookingTypImpl bookingType) {
         this.bookingType = bookingType;
     }
 
@@ -56,7 +56,7 @@ public class BookingImpl implements Booking {
     }
 
     @Override
-    public BookingTypeImpl getBookingType() {
+    public BookingTypImpl getBookingTyp() {
         return bookingType;
     }
 }

@@ -8,14 +8,9 @@ import java.util.Date;
 
 public interface AppUserSubscription {
     Long getId();
-
     String getStartDate();
-
     String  getEndDate();
-
-    AppUserImpl getAppUser();
-
-    SubscriptionImpl getSubscription();
-
-    RebateImpl getRebate();
+    AppUser getAppUser();
+    Subscription getSubscription();
+    Rebate getRebate();
 }

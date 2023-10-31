@@ -6,6 +6,7 @@ import ch.zli.m223.model.Rebate;
 import ch.zli.m223.model.Subscription;
 import ch.zli.m223.service.user.exception.InvalidIdException;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -63,4 +64,11 @@ public interface AppUserSubscriptionService {
             Long id,
             Date startDate, Date endDate
     );
+
+    List<AppUserSubscription> getSubscriptionList();
+
+
+    AppUserSubscription updateSubscription(Long id, String startDate, String endDate, String appUser, String subscriptionTyp, String rebate);
+
+    AppUserSubscription setSubscriptionTyp(Long id, String subscriptionTyp);
 }

@@ -27,4 +27,24 @@ public class BookingServiceImpl implements BookingService {
     public Booking addBooking(String date, AppUser appUser, BookingTyp bookingTyp) {
         return null;
     }
+
+    @Override
+    public Booking updateBooking(Long id, String date, String appUser, String bookingTyp) {
+        return null;
+    }
+
+    @Override
+    public List<Booking> getBookingList() {
+        return null;
+    }
+
+    @Override
+    public void deleteBooking(Long id) {
+
+    }
+
+    @Override
+    public Booking setBookingTyp(Long id, String bookingTyp) {
+        return null;
+    }
 }
